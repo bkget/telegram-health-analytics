@@ -1,4 +1,4 @@
-# 📦 Shipping a Data Product: From Raw Telegram Data to an Analytical API
+## 📦 Shipping a Data Product: From Raw Telegram Data to an Analytical API
 
 [![MIT License][license-shield]][license-url]
 [![Stars][stars-shield]][stars-url]
@@ -10,7 +10,7 @@
 
 ---
 
-## 🧠 Business Objective
+### 🧠 Business Objective
 
 This project delivers an end-to-end data product that ingests and analyzes public Telegram messages from Ethiopian medical business channels. It is built to answer key analytical questions, such as:
 
@@ -21,22 +21,24 @@ This project delivers an end-to-end data product that ingests and analyzes publi
 
 ---
 
-## 🏗️ Project Architecture
+### 🏗️ Project Architecture
 
 ```text
-┌────────────┐     ┌────────────┐     ┌─────────────┐     ┌────────────┐
+┌────────────┐     ┌────────────┐     ┌─────────────┐     ┌─────────────┐
 │ Telegram   │ --> │ Data Lake  │ --> │ PostgreSQL  │ --> │ FastAPI     │
 │ Scraper    │     │ (JSON)     │     │ + dbt       │     │ (Analytics) │
-└────────────┘     └────────────┘     └─────────────┘     └────────────┘
+└────────────┘     └────────────┘     └─────────────┘     └─────────────┘
                             ↑
                             │
-                        YOLOv8
-                    (Image Detection)
+                ┌──────────────────────┐
+                │       YOLOv8         |
+                │  (Image Detection)   |
+                └──────────────────────┘
 ```
 
 ---
 
-## 🧰 Tech Stack
+### 🧰 Tech Stack
 
 | Tool         | Purpose                                |
 |--------------|----------------------------------------|
@@ -50,15 +52,15 @@ This project delivers an end-to-end data product that ingests and analyzes publi
 
 ---
 
-## 🚀 Getting Started
+### 🚀 Getting Started
 
-### ✅ Prerequisites
+#### ✅ Prerequisites
 
 - Docker & Docker Compose
 - Python 3.10+
 - Telegram API credentials (`api_id`, `api_hash`)
 
-### 📦 Setup & Run
+#### 📦 Setup & Run
 
 1. **Clone the repository**
    ```bash
@@ -84,7 +86,7 @@ This project delivers an end-to-end data product that ingests and analyzes publi
 
 ---
 
-## 🧪 Features
+### 🧪 Features
 
 - ✅ Scrapes text & media from public Telegram channels
 - 🛠️ Transforms raw JSON to analytics-ready data via dbt
@@ -95,7 +97,7 @@ This project delivers an end-to-end data product that ingests and analyzes publi
 
 ---
 
-## 🔎 API Overview
+### 🔎 API Overview
 
 Example endpoints once the pipeline is live:
 
@@ -110,7 +112,7 @@ You can try them directly from Swagger UI at:
 
 ---
 
-## 📊 Data Modeling (dbt)
+### 📊 Data Modeling (dbt)
 
 - **Source Layer**: Raw JSON messages (`raw_telegram_messages`)
 - **Staging Layer**: Normalized fields (`stg_telegram_messages`)
@@ -128,7 +130,7 @@ Explore lineage and documentation using `dbt docs serve`.
 
 ---
 
-## 🗃️ Folder Structure
+### 🗃️ Folder Structure
 
 ```
 .
@@ -145,7 +147,7 @@ Explore lineage and documentation using `dbt docs serve`.
 
 ---
 
-## 👤 Author
+### 👤 Author
 
 **Biruk Getaneh**  
 📧 [bkgetmom@gmail.com](mailto:bkgetmom@gmail.com)  
@@ -153,7 +155,7 @@ Explore lineage and documentation using `dbt docs serve`.
 
 ---
 
-## 🙏 Acknowledgements
+### 🙏 Acknowledgements
 
 - [Telegram API](https://core.telegram.org/)
 - [YOLOv8 by Ultralytics](https://github.com/ultralytics/ultralytics)
