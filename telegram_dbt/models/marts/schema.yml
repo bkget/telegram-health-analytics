@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: stg_telegram_messages
+    description: >
+      Staging model for raw Telegram messages extracted from JSON. Parses and cleans key fields.
+    columns:
+      - name: id
+        description: Unique message ID
+        tests:
+          - not_null
+          - unique
+      - name: source_file
+        description: Name of the source JSON file (channel + scrape timestamp)
+        tests:
+          - not_null
+      - name: date
+        description: Timestamp of the message
+      - name: text
+        description: Text content of the message
+      - name: views
+        description: Number of views the message received
+      - name: replies
+        description: Number of replies to the message
+      - name: forwards
+        description: Number of times the message was forwarded
+      - name: from_id
+        description: ID of the author (user/channel) who posted the message
+
+  - name: fct_message_engagements
+    description: >
+      Fact table capturing message-level engagement statistics such as views, replies, and forwards.
+    columns:
+      - name: message_id
+        description: Unique ID of the message
+        tests:
+          - not_null
+          - unique
+      - name: source_file
+        description: Source JSON file name
+      - name: date
+        description: Timestamp of the message
+      - name: text
+        description: Message text
+      - name: views
+        description: Number of views
+      - name: replies
+        description: Number of replies
+      - name: forwards
+        description: Number of forwards
+
+  - name: fct_channel_activity
+    description: >
+      Aggregated channel activity based on each scraped JSON file. Includes totals and date range.
+    columns:
+      - name: source_file
+        description: Source JSON file name representing the channel scrape
+        tests:
+          - not_null
+          - unique
+      - name: first_message_at
+        description: Earliest message timestamp in this batch
+      - name: last_message_at
+        description: Latest message timestamp in this batch
+      - name: total_messages
+        description: Total number of messages in this scrape
+      - name: total_views
+        description: Total views across messages
+      - name: total_replies
+        description: Total replies across messages
+      - name: total_forwards
+        description: Total forwards across messages
+
+  - name: dim_authors
+    description: >
+      Dimension table of message authors extracted from the messages.
+    columns:
+      - name: author_id
+        description: Unique identifier of the message author
+        tests:
+          - not_null
