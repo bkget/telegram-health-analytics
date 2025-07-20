@@ -1,8 +1,8 @@
 ## 📦 Shipping a Data Product: From Raw Telegram Data to an Analytical API
 
-[![MIT License][license-shield]][license-url]
-[![Stars][stars-shield]][stars-url]
-[![Issues][issues-shield]][https://github.com/bkget/telegram-health-analytics/issues]
+[![MIT License](https://img.shields.io/github/license/bkget/telegram-health-analytics.svg)](https://github.com/bkget/telegram-health-analytics/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/bkget/telegram-health-analytics.svg)](https://github.com/bkget/telegram-health-analytics/stargazers)
+[![Issues](https://img.shields.io/github/issues/bkget/telegram-health-analytics.svg)](https://github.com/bkget/telegram-health-analytics/issues)
 
 <!-- <p align="right">
   <a href="https://your-dbt-docs-link.com" target="_blank"><strong>» Explore dbt Docs «</strong></a>
