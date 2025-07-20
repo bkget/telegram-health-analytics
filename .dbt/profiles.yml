@@ -1,0 +1,12 @@
+telegram_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: db
+      user: postgres
+      password: postgres
+      port: 5432
+      dbname: telegram_data_db
+      schema: public
+      threads: 1
