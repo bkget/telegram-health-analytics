@@ -2,7 +2,7 @@
 
 [![MIT License][license-shield]][license-url]
 [![Stars][stars-shield]][stars-url]
-[![Issues][issues-shield]][[https://github.com/bkget/telegram-health-analytics/issues]
+[![Issues][issues-shield]][https://github.com/bkget/telegram-health-analytics/issues]
 
 <!-- <p align="right">
   <a href="https://your-dbt-docs-link.com" target="_blank"><strong>» Explore dbt Docs «</strong></a>
