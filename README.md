@@ -10,18 +10,18 @@
 
 ---
 
-### 🧠 Business Objective
+### Business Objective
 
 This project delivers an end-to-end data product that ingests and analyzes public Telegram messages from Ethiopian medical business channels. It is built to answer key analytical questions, such as:
 
-- 🔍 What are the most frequently mentioned medical products?
-- 📊 How do pricing and availability trends evolve over time?
-- 🕒 What are the posting patterns (daily/weekly)?
-- 🖼️ Which channels share the most image-based product content?
+- What are the most frequently mentioned medical products?
+- How do pricing and availability trends evolve over time?
+- What are the posting patterns (daily/weekly)?
+- Which channels share the most image-based product content?
 
 ---
 
-### 🏗️ Project Architecture
+### Project Architecture
 
 ```text
 ┌────────────┐     ┌────────────┐     ┌─────────────┐     ┌─────────────┐
@@ -38,7 +38,7 @@ This project delivers an end-to-end data product that ingests and analyzes publi
 
 ---
 
-### 🧰 Tech Stack
+### Tech Stack
 
 | Tool         | Purpose                                |
 |--------------|----------------------------------------|
@@ -52,15 +52,15 @@ This project delivers an end-to-end data product that ingests and analyzes publi
 
 ---
 
-### 🚀 Getting Started
+### Getting Started
 
-#### ✅ Prerequisites
+#### Prerequisites
 
 - Docker & Docker Compose
 - Python 3.10+
 - Telegram API credentials (`api_id`, `api_hash`)
 
-#### 📦 Setup & Run
+#### Setup & Run
 
 1. **Clone the repository**
    ```bash
@@ -86,18 +86,18 @@ This project delivers an end-to-end data product that ingests and analyzes publi
 
 ---
 
-### 🧪 Features
+### Features
 
-- ✅ Scrapes text & media from public Telegram channels
-- 🛠️ Transforms raw JSON to analytics-ready data via dbt
-- 🖼️ Applies YOLOv8 to detect pills, creams, and packaging
-- 📈 Aggregates posting trends by channel and day
-- 🔁 Schedules jobs using Dagster with Docker integration
-- 📬 Exposes insights via a FastAPI interface
+- Scrapes text & media from public Telegram channels
+- Transforms raw JSON to analytics-ready data via dbt
+- Applies YOLOv8 to detect pills, creams, and packaging
+- Aggregates posting trends by channel and day
+- Schedules jobs using Dagster with Docker integration
+- Exposes insights via a FastAPI interface
 
 ---
 
-### 🔎 API Overview
+### API Overview
 
 Example endpoints once the pipeline is live:
 
@@ -112,7 +112,7 @@ You can try them directly from Swagger UI at:
 
 ---
 
-### 📊 Data Modeling (dbt)
+### Data Modeling (dbt)
 
 - **Source Layer**: Raw JSON messages (`raw_telegram_messages`)
 - **Staging Layer**: Normalized fields (`stg_telegram_messages`)
@@ -130,7 +130,7 @@ Explore lineage and documentation using `dbt docs serve`.
 
 ---
 
-### 🗃️ Folder Structure
+### Folder Structure
 
 ```
 .
