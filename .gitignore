@@ -23,6 +23,7 @@ env/
 *.pid
 *.tar
 *.bak
+*.session
 docker-compose.override.yml
 
 # VSCode settings

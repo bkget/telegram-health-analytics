@@ -40,5 +40,19 @@ services:
     depends_on:
       - db
 
+  jupyter:
+    image: python:3.11-slim
+    container_name: telegram_jupyter
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888"
+    depends_on:
+      - db
+    command: >
+      bash -c "pip install --no-cache-dir -r requirements.txt &&
+               jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+               
 volumes:
   postgres_data:

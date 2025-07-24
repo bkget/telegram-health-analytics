@@ -6,3 +6,8 @@ dbt-core
 dbt-postgres
 psycopg2-binary
 python-dotenv 
+jupyter
+pandas
+matplotlib
+seaborn
+sqlalchemy
