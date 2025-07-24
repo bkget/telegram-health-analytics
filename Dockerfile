@@ -9,12 +9,15 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Python dependencies installation
+# Install Jupyter alongside your other Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt jupyter
 
 # Copy codebase
 COPY . .
 
-# Run both load_json_to_postgres.py and scraper.py
-CMD ["sh", "/app/start.sh"]
+# Expose Jupyter notebook port
+EXPOSE 8888
+
+# Start Jupyter Notebook AND your existing scripts via start.sh
+CMD ["sh", "-c", "jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' & sh /app/start.sh"]
