@@ -1,4 +1,4 @@
-## 📦 Shipping a Data Product: From Raw Telegram Data to an Analytical API
+## Shipping a Data Product: From Raw Telegram Data to an Analytical API
 
 [![MIT License](https://img.shields.io/github/license/bkget/telegram-health-analytics.svg)](https://github.com/bkget/telegram-health-analytics/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/bkget/telegram-health-analytics.svg)](https://github.com/bkget/telegram-health-analytics/stargazers)
